@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Data.UI.MainActivity"
+    >
+
+    <include
+        android:id="@+id/recyclerViewHeader"
+        layout="@layout/recyclerview_car_item" />
+
+   <androidx.recyclerview.widget.RecyclerView
+       android:id="@+id/carRecyclerView"
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       android:layout_weight="9"
+       />
+
+    <LinearLayout
+        android:id="@+id/checkBoxLayout"
+        android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+
+        >
+
+       <CheckBox
+           android:id="@+id/makeCheckbox"
+           android:layout_gravity="center"
+           android:text="Make"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:layout_weight="1"
+           android:onClick="checkBoxOnClick"
+           />
+        <CheckBox
+            android:id="@+id/modelCheckbox"
+            android:layout_gravity="center"
+            android:text="Model"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:onClick="checkBoxOnClick"
+            />
+        <CheckBox
+            android:id="@+id/yearCheckbox"
+            android:layout_gravity="center"
+            android:text="Year"
+            android:onClick="checkBoxOnClick"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
+        <CheckBox
+            android:id="@+id/priceCheckbox"
+            android:layout_gravity="center"
+            android:onClick="checkBoxOnClick"
+            android:text="Price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            />
+        </LinearLayout>
+
+
+
+
+</LinearLayout>
